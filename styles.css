@@ -1,0 +1,54 @@
+body {
+    font-family: futura;
+    font-size: 48px;
+    background-color: rgb(128, 87, 240);
+}
+
+.sliders {
+    /* width: 25%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.slider {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px red solid; */
+}
+
+.left {
+    /* margin-right: 24px; */
+    width: 50px;
+    text-align: center;
+    /* border: 1px blue solid; */
+}
+
+.right {
+    width: 100px;
+    /* border: 1px blue solid; */
+    text-align: right;
+}
+
+
+.rgb {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+.hex {
+    display: flex;
+}
