@@ -109,5 +109,42 @@ blue.addEventListener("input", function() {
 });
 
 
+// copy to clipboard when text is clicked
 
 
+function copyButtonHex(){
+    var content = document.getElementById('hex').innerHTML;
+
+    navigator.clipboard.writeText(content)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+
+}
+
+function copyButton(id) {
+    var copyText = document.getElementById(id).childNodes[0].nodeValue;
+
+    console.log(copyText)
+
+    navigator.clipboard.writeText(copyText)
+        .then(() => {
+        console.log("Text copied to clipboard...")
+
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+    
+    var tooltip = document.getElementById(id);
+    tooltip.innerHTML = "Copied: " + copyText;
+  }
+  
+//   function outFunc() {
+//     var tooltip = document.getElementById('rgb').childNodes[0].nodeValue;
+//     console.log(tooltip)
+//   }
