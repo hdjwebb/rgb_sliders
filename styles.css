@@ -1,6 +1,6 @@
 body {
     font-family: futura;
-    font-size: 48px;
+    font-size: 24px;
     background-color: rgb(128, 87, 240);
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .slider {
-    width: 400px;
+    width: 300px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -29,11 +29,16 @@ body {
     /* border: 1px red solid; */
 }
 
+
 .left {
     /* margin-right: 24px; */
     width: 50px;
     text-align: center;
     /* border: 1px blue solid; */
+}
+
+.range {
+    width: 255px;
 }
 
 .right {
@@ -46,7 +51,7 @@ body {
 .rgb {
     display: flex;
     justify-content: center;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .hex {

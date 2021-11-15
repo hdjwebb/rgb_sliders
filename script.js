@@ -17,10 +17,13 @@ var blue = document.querySelector("#blue");
 var body = document.querySelector("#body");
 
 
-function decToHex(num) {
-    let hex = parseInt(num, 10).toString(16)
-    return hex
-}
+var rgbToHex = function (rgb) { 
+    var hex = Number(rgb).toString(16);
+    if (hex.length < 2) {
+         hex = "0" + hex;
+    }
+    return hex;
+  };
 
 // let hexStr = number.toString(16);
 
@@ -28,6 +31,9 @@ function decToHex(num) {
 
 function rgbBackground() {
     
+
+
+
     let rgb = `rgb(${redValue}, ${greenValue}, ${blueValue})`
     console.log(rgb)
 
@@ -43,9 +49,9 @@ function rgbBackground() {
     body.style["background-color"] =  rgb;
 
     // hex
-    let octet1 = decToHex(redValue)
-    let octet2 = decToHex(greenValue)
-    let octet3 = decToHex(blueValue)
+    let octet1 = rgbToHex(redValue)
+    let octet2 = rgbToHex(greenValue)
+    let octet3 = rgbToHex(blueValue)
 
     console.log(octet1)
     console.log(octet2)
@@ -54,24 +60,28 @@ function rgbBackground() {
     let hex = `#${octet1}${octet2}${octet3}`
     document.getElementById("hex").innerHTML = hex;
 
+    switch(true) {
+        case (redValue < 80 && greenValue < 80 && blueValue > 80):
+            // code block
+            body.style["color"] =  "white";
+            break;
+        case (greenValue < 80 && redValue > 80 && blueValue < 80):
+            // code block
+            body.style["color"] =  "white";
+            break;
+        case (blueValue < 80 && redValue < 80 && greenValue > 80):
+            // code block
+            body.style["color"] =  "white";
+            break;
+            case (blueValue < 80 && redValue < 80 && greenValue < 80):
+                // code block
+                body.style["color"] =  "white";
+                break;
+        default:
+          // code block
+          body.style["color"] =  "black";
+      }
 }
-
-
-function setClipboard(text) {
-    var type = "text/plain";
-    var blob = new Blob([text], { type });
-    var data = [new ClipboardItem({ [type]: blob })];
-
-    navigator.clipboard.write(data).then(
-        function () {
-        /* success */
-        },
-        function () {
-        /* failure */
-        }
-    );
-}
-
 
   
 
