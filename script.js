@@ -33,7 +33,7 @@ function rgbBackground() {
 
 
     let rgb = `rgb(${redValue}, ${greenValue}, ${blueValue})`
-    console.log(rgb)
+    // console.lxog(rgb)
 
     // change numbers
     document.getElementById("red_number").innerHTML = redValue;
@@ -51,9 +51,9 @@ function rgbBackground() {
     let octet2 = rgbToHex(greenValue)
     let octet3 = rgbToHex(blueValue)
 
-    console.log(octet1)
-    console.log(octet2)
-    console.log(octet3)
+    // console.log(octet1)
+    // console.log(octet2)
+    // console.log(octet3)
 
     let hex = `#${octet1}${octet2}${octet3}`
     document.getElementById("hex").innerHTML = hex;
@@ -113,7 +113,7 @@ blue.addEventListener("input", function() {
 function copyButtonHex(){
     var content = document.getElementById('hex').innerHTML;
 
-    navigator.clipboard.writeText(content)
+    var promise = navigator.clipboard.writeText(content)
         .then(() => {
         console.log("Text copied to clipboard...")
 
@@ -127,9 +127,9 @@ function copyButtonHex(){
 function copyButton(id) {
     var copyText = document.getElementById(id).childNodes[0].nodeValue;
 
-    console.log(copyText)
+    // console.log(copyText)
 
-    navigator.clipboard.writeText(copyText)
+    var promise = navigator.clipboard.writeText(copyText)
         .then(() => {
         console.log("Text copied to clipboard...")
 
@@ -150,5 +150,5 @@ function outFunc(id) {
    
     reset.innerHTML = newCopyText + "<span class=\"tooltiptext\" id=\""+id+"Tooltip\">Copy to clipboard</span>";
 
-    console.log(reset.innerHTML)
+    // console.log(reset.innerHTML)
 }
