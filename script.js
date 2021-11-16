@@ -1,10 +1,10 @@
 
+
 // set value of variables to use as global variables
 
 let redValue = 128
 let greenValue = 87
 let blueValue = 240
-
 // query the range sliders and get their values
 
 var red = document.querySelector("#red");
@@ -30,8 +30,6 @@ var rgbToHex = function (rgb) {
 // function to change backround colour used in each listener
 
 function rgbBackground() {
-    
-
 
 
     let rgb = `rgb(${redValue}, ${greenValue}, ${blueValue})`
@@ -142,9 +140,15 @@ function copyButton(id) {
     
     var tooltip = document.getElementById(id);
     tooltip.innerHTML = "Copied: " + copyText;
-  }
+}
   
-//   function outFunc() {
-//     var tooltip = document.getElementById('rgb').childNodes[0].nodeValue;
-//     console.log(tooltip)
-//   }
+
+function outFunc(id) {
+    var copyText = document.getElementById(id).childNodes[0].nodeValue;
+    var newCopyText = copyText.replace('Copied: ','');
+    var reset = document.getElementById(id);
+   
+    reset.innerHTML = newCopyText + "<span class=\"tooltiptext\" id=\""+id+"Tooltip\">Copy to clipboard</span>";
+
+    console.log(reset.innerHTML)
+}
