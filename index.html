@@ -10,6 +10,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./script.js" async defer></script>
         <link rel="stylesheet" href="./styles.css">
     </head>
 
@@ -23,24 +24,24 @@
         <main id="square" class="sliders">
             <div class="red slider">
                 <label class="left" for="red">R</label>
-                <input class="range" type="range" id="red" name="red" min="0" max="255" value="128">
-                <h4 class="right" id="red_number">128</h4>
+                <input class="range" type="range" id="red" name="red" min="0" max="255" >
+                <h4 class="right" id="red_number"></h4>
             </div>
             <div class="green slider">
                 <label class="left" for="green">G</label>
-                <input class="range" type="range" id="green" name="green" min="0" max="255" value="87">
-                <h4 class="right" id="green_number">87</h4>
+                <input class="range" type="range" id="green" name="green" min="0" max="255" >
+                <h4 class="right" id="green_number"></h4>
             </div>
 
             <div class="blue slider">
                 <label class="left" for="blue">B</label>
-                <input class="range" type="range" id="blue" name="blue" min="0" max="255" value="240">
-                <h4 class="right" id="blue_number">240</h4>
+                <input class="range" type="range" id="blue" name="blue" min="0" max="255" >
+                <h4 class="right" id="blue_number"></h4>
             </div>
             
-            <h6 class="tooltip rgb" id="rgb" onclick="copyButton('rgb', this)" onmouseout="outFunc('rgb', this)">rgb(128, 87, 240)<span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></h6>
+            <h6 class="tooltip rgb" id="rgb" ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)" onmouseout="outFunc('rgb', this)"><span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></h6>
 
-            <h6 class="tooltip hex" id="hex" onclick="copyButton('hex', this)" onmouseout="outFunc('hex', this)">#8057f0<span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></h6>
+            <h6 class="tooltip hex" id="hex" ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" onmouseout="outFunc('hex', this)"><span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></h6>
 
         </main>
 

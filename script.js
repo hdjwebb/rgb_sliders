@@ -1,17 +1,28 @@
 
 
+
 // set value of variables to use as global variables
 
-let redValue = 128
-let greenValue = 87
-let blueValue = 240
+
+// random generated numbers!
+let redValue = Math.floor(Math.random() * 256)
+let greenValue = Math.floor(Math.random() * 256)
+let blueValue = Math.floor(Math.random() * 256)
+
+// set ranges
+document.getElementById("red").value = redValue
+document.getElementById("red_number").innerHTML = redValue
+
+document.getElementById("green").value = greenValue;
+document.getElementById("green_number").innerHTML = greenValue;
+
+document.getElementById("blue").value = blueValue;
+document.getElementById("blue_number").innerHTML = blueValue;
+
 // query the range sliders and get their values
-
-var red = document.querySelector("#red");
-var green = document.querySelector("#green");
-var blue = document.querySelector("#blue");
-
-// var square = document.querySelector("#square");
+// var red = document.querySelector("#red");
+// var green = document.querySelector("#green");
+// var blue = document.querySelector("#blue");
 
 // get the document body
 var body = document.querySelector("#body");
@@ -25,12 +36,15 @@ var rgbToHex = function (rgb) {
     return hex;
   };
 
-// let hexStr = number.toString(16);
+// Set colours and rgb abd hex
+
+rgbBackground()
+
+
 
 // function to change backround colour used in each listener
 
 function rgbBackground() {
-
 
     let rgb = `rgb(${redValue}, ${greenValue}, ${blueValue})`
     // console.lxog(rgb)
@@ -71,13 +85,13 @@ function rgbBackground() {
             // code block
             body.style["color"] =  "white";
             break;
-            case (blueValue < 80 && redValue < 80 && greenValue < 80):
-                // code block
-                body.style["color"] =  "white";
-                break;
+        case (blueValue < 80 && redValue < 80 && greenValue < 80):
+            // code block
+            body.style["color"] =  "white";
+            break;
         default:
-          // code block
-          body.style["color"] =  "black";
+            // code block
+            body.style["color"] =  "black";
       }
 }
 
@@ -140,6 +154,14 @@ function copyButton(id) {
     
     var tooltip = document.getElementById(id);
     tooltip.innerHTML = "Copied: " + copyText;
+
+    setTimeout(function(){ 
+        console.log("Ready")
+        outFunc(id)
+    }, 500);
+
+    // outFunc(id)
+
 }
   
 
