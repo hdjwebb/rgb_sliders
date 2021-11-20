@@ -5,9 +5,9 @@
 
 
 // random generated numbers!
-let redValue = Math.floor(Math.random() * 256)
-let greenValue = Math.floor(Math.random() * 256)
-let blueValue = Math.floor(Math.random() * 256)
+var redValue = Math.floor(Math.random() * 256)
+var greenValue = Math.floor(Math.random() * 256)
+var blueValue = Math.floor(Math.random() * 256)
 
 // set ranges
 document.getElementById("red").value = redValue
@@ -155,12 +155,14 @@ function copyButton(id) {
     var tooltip = document.getElementById(id);
     tooltip.innerHTML = "Copied: " + copyText;
 
+    // sets a timeout for touch users so they see the fact they copied but can't copy again and get the word copied!!
+    // PROBABLY A BETTER WAY BUT HEY I'M LEARNING
+
     setTimeout(function(){ 
-        console.log("Ready")
+        // console.log("I WAITED")
         outFunc(id)
     }, 500);
 
-    // outFunc(id)
 
 }
   
