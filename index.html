@@ -39,10 +39,11 @@
                 <h4 class="right" id="blue_number"></h4>
             </div>
             
-            <h6 class="tooltip rgb" id="rgb" ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)" onmouseout="outFunc('rgb', this)"><span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></h6>
+            <div class="css-container">
+                <h6 class="tooltip rgb css" id="rgb" ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)" onmouseout="outFunc('rgb', this)"><span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></h6>
 
-            <h6 class="tooltip hex" id="hex" ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" onmouseout="outFunc('hex', this)"><span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></h6>
-
+                <h6 class="tooltip hex css" id="hex" ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" onmouseout="outFunc('hex', this)"><span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></h6>
+            </div>
         </main>
 
         <script src="./script.js" async defer></script>
