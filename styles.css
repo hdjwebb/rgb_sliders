@@ -6,13 +6,13 @@ body {
 
 .sliders {
     /* width: 25%; */
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     height: 300px;
     width: 300px;
     margin-top: -150px;
-    margin-left: -150px;
+    margin-left: -150px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@ body {
 }
 
 .slider {
-    width: 300px;
-    height: 100px;
+    width: 350px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,24 +38,40 @@ body {
 }
 
 .range {
-    width: 255px;
+    width: 300px;
 }
 
 .right {
-    width: 100px;
+    width: 65px;
     /* border: 1px blue solid; */
     text-align: right;
 }
 
-
-.rgb {
+.css-container {
     display: flex;
-    justify-content: center;
-    /* width: 400px; */
+    flex-wrap: wrap;
+    width: 300px;
+    /* height: 600px; */
+    /* flex-direction: column; */
+    justify-content: flex-end;
+    align-content: flex-start;
+
+    /* border: 1px solid red; */
+}
+
+.css {
+    text-align: right;
+}
+.rgb {
+
+    width: 250px;
+    /* border: 1px solid red; */
 }
 
 .hex {
-    display: flex;
+
+    width: 250px;
+    /* border: 1px solid red; */
 }
 
 
@@ -77,7 +93,7 @@ body {
     position: absolute;
     z-index: 1;
     bottom: 150%;
-    left: 50%;
+    left: 75%;
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
