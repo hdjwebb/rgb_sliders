@@ -163,6 +163,7 @@ function copyButton(id) {
         outFunc(id)
     }, 500);
 
+    window.focus();
 
 }
   
