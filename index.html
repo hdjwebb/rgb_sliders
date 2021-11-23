@@ -10,7 +10,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="./script.js" async defer></script>
+        <script src="./script.js" async></script>
+        <!-- <script src="./script.js" async defer></script> -->
         <link rel="stylesheet" href="./styles.css">
     </head>
 
@@ -40,12 +41,18 @@
             </div>
             
             <div class="css-container">
-                <h6 class="tooltip rgb css" id="rgb" ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)" onmouseout="outFunc('rgb', this)"><span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></h6>
-
-                <h6 class="tooltip hex css" id="hex" ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" onmouseout="outFunc('hex', this)"><span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></h6>
+                <div class="inner">
+                    <p ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)">Copy</p>
+                    <p class="code tooltip rgb css" id="rgb"></p>
+                    <!-- <p class="code tooltip rgb css" id="rgb" ontouchstart="copyButton('rgb', this)" onclick="copyButton('rgb', this)" ontouchend="outFunc('rgb', this)" onmouseout="outFunc('rgb', this)"><span class="tooltiptext" id="rgbTooltip">Copy to clipboard</span></p> -->
+                </div>
+                <div class="inner">
+                    <p ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" >Copy</p>
+                    <p class="code tooltip hex css" id="hex"></p>
+                    <!-- <p class="code tooltip hex css" id="hex" ontouchstart="copyButton('hex', this)" onclick="copyButton('hex', this)" ontouchend="outFunc('hex', this)" onmouseout="outFunc('hex', this)"><span class="tooltiptext" id="hexTooltip">Copy to clipboard</span></p> -->
+                </div>
             </div>
         </main>
 
-        <script src="./script.js" async defer></script>
     </body>
 </html>

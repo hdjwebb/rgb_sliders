@@ -163,7 +163,8 @@ function copyButton(id) {
         outFunc(id)
     }, 500);
 
-    window.focus();
+    
+    // window.focus();
 
 }
   
@@ -173,7 +174,8 @@ function outFunc(id) {
     var newCopyText = copyText.replace('Copied: ','');
     var reset = document.getElementById(id);
    
-    reset.innerHTML = newCopyText + "<span class=\"tooltiptext\" id=\""+id+"Tooltip\">Copy to clipboard</span>";
-
+    reset.innerHTML = newCopyText;
+    // reset.innerHTML = newCopyText + "<span class=\"tooltiptext\" id=\""+id+"Tooltip\">Copy to clipboard</span>";
+ 
     // console.log(reset.innerHTML)
 }
