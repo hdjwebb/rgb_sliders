@@ -66,6 +66,11 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+p:hover.button {
+    cursor: copy;
+}
+
 .code {
     font-family: monospace;
     background-color: #777;
